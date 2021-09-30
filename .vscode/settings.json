@@ -1,0 +1,12 @@
+{
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": false
+    },
+    "editor.detectIndentation": true,
+    "editor.tabSize": 2,
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma"
+    },
+}

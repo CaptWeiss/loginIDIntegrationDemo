@@ -1,0 +1,18 @@
+.login-form,
+.login-form>fieldset {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  .text {
+    width: 50vw;
+    margin-top: 1rem;
+    &~button {
+      margin-top: 3rem;
+    }
+  }
+  legend {
+    font-size: 2rem;
+  }
+}

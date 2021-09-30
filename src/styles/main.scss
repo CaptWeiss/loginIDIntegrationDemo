@@ -1,0 +1,36 @@
+@use './partials/shared';
+@use './partials/forms';
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=La+Belle+Aurore&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Acme', 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+main {
+  margin-top: 80px;
+  display: flex;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}

@@ -1,0 +1,21 @@
+{
+  "plugins": ["@typescript-eslint"],
+  "extends": ["airbnb", "airbnb-typescript", "plugin:react/jsx-runtime","next/core-web-vitals"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": "off",
+    "object-curly-newline": "off",
+    "max-len": ["error", {
+      "code": 120
+    }],
+    "import/no-mutable-exports": "off",
+    "arrow-parens": "off",
+    "react/display-name": "off",
+    "@typescript-eslint/naming-convention": "off"
+  }
+}

@@ -1,0 +1,26 @@
+{
+    "presets": ["next/babel"],
+    "plugins": [
+        [
+            "babel-plugin-import",
+            {
+                "libraryName": "@mui",
+                // Use ""libraryDirectory": ""," if your bundler does not support ES modules
+                "libraryDirectory": "material",
+                "camel2DashComponentName": false
+            },
+            "material"
+        ]
+        // ,
+        // [
+        //     "babel-plugin-import",
+        //     {
+        //         "libraryName": "@mui/material",
+        //         // Use ""libraryDirectory": ""," if your bundler does not support ES modules
+        //         "libraryDirectory": "material/styles",
+        //         "camel2DashComponentName": false
+        //     },
+        //     "styles"
+        // ]
+    ]
+}

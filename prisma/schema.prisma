@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  title     String   @db.VarChar(255)
+  createdAt DateTime @default(now()) @db.Timestamp(6)
+  content   String
+  read      Boolean  @default(false)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  code      AuthorizeCode?
+}
+
+model User {
+  id            String            @id @default(uuid())
+  username      String            @unique @db.VarChar(255)
+  lastLoggedIn  DateTime          @db.Timestamp(6)
+  createdAt     DateTime          @default(now()) @db.Timestamp(6)
+  notifications Notification[]
+}
+
+model AuthorizeCode {
+  id            Int           @id @default(autoincrement())
+  createdAt DateTime @default(now()) @db.Timestamp(6)
+  code          String        @db.VarChar(255)
+  type          String        @db.VarChar(10)
+  exp           DateTime      @db.Timestamp(6)
+  status        Int           @db.SmallInt()
+  notificationId String
+  notification  Notification  @relation(fields: [notificationId], references: [id])
+}
