@@ -1,4 +1,5 @@
 # [LoginID](https://loginid.io/) Web Client / Server integration Demo App
+![Screenshot from 2021-09-30 14-38-58](https://user-images.githubusercontent.com/25622676/135468702-8e580e47-9892-498c-9247-308eef40eea8.png)
 
 ## Getting Started
 
